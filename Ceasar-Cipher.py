@@ -1,10 +1,8 @@
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-
 def encryptFile(shift):
     inputFile=open("input.txt","r")
     outputFile=open("output.txt","w")
-    lines=inputFile.readlines()
-    
+    lines=inputFile.readlines()    
     for line in lines:
         newLine=[]
         for x in range(len(line)):
@@ -33,7 +31,6 @@ def decryptFile(shift):
     inputFile=open("input.txt","r")
     outputFile=open("output.txt","w")
     lines=inputFile.readlines()
-    
     for line in lines:
         newLine=[]
         for x in range(len(line)):
@@ -58,7 +55,6 @@ def decryptFile(shift):
         print(line)
         outputFile.writelines(line)
     menu(2)
-
 def menu(code):
     codes=["","Encryption","Decryption"]
     if code > 0:
