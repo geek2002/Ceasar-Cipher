@@ -54,6 +54,8 @@ def decryptFile(shift):
         line="".join(newLine)
         print(line)
         outputFile.writelines(line)
+    inputFile.close()
+    outputFile.close()
     menu(2)
 def menu(code):
     codes=["","Encryption","Decryption"]
@@ -75,5 +77,5 @@ def menu(code):
         exit()
     else:
         print("Error , Please only use 1,2,3,4 or 5")
-        menu()
+        menu(0)
 menu(0)
